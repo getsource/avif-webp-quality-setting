@@ -2,31 +2,43 @@ const { promisify } = require("util");
 const sharp = require("sharp");
 const stat = promisify(require("fs").stat);
 const exists = promisify(require("fs").exists);
+const exec = promisify(require("child_process").exec);
 const execFile = promisify(require("child_process").execFile);
+const writeFile = promisify(require("fs").writeFile);
 
 const DATA = require("../data/image-quality.json");
-const SAMPLE_PATH = "./quality-samples";
 
-async function getFilename(input, format, width, quality, extension) {
+const WORDPRESS_PATH = "/path/to/your/wordpress-develop"
+const SAMPLE_PATH = WORDPRESS_PATH + "/src/wp-content/quality-samples";
+const REMOTE_SAMPLE_PATH = "/var/www/src/wp-content/quality-samples";
+
+
+async function getFilename(input, format, width, quality, extension, remote = false) {
+  const path = remote ? REMOTE_SAMPLE_PATH : SAMPLE_PATH;
   const prefix = input
     .replace(`${SAMPLE_PATH}/`, "")
     .replace(/\.\w+$/, "")
     .replace(/\W/g, "-");
-  return `${SAMPLE_PATH}/${prefix}-${width}-${format}-${quality}.${extension}`;
+  return `${path}/${prefix}-${width}-${format}-${quality}.${extension}`;
 }
 
 async function makeImage(input, format, width, quality) {
+  const input_remote = input.replace( SAMPLE_PATH, REMOTE_SAMPLE_PATH );
+
   const filename = await getFilename(input, format, width, quality, format);
+  const filename_php = filename + ".php";
+
+  const filename_remote = await getFilename(input, format, width, quality, format, true);
+  const filename_php_remote = filename_remote + ".php";
 
   if (!(await imageExists(filename))) {
-    await sharp(input)
-      .rotate() // Manifest rotation from metadata
-      .resize(width)
-      [format]({
-        quality,
-        reductionEffort: 6,
-      })
-      .toFile(filename);
+    const phpToRun = `<?php $image = wp_get_image_editor( '${input_remote}' ); $image->resize( ${width}, null ); add_filter( 'wp_editor_set_quality', function( $quality ) { return ${quality}; }, 10, 1 ); $image->set_quality( ${quality} ); $image->save( '${filename_remote}' );`;
+    const runPHPConvert = `npm run env:cli "eval-file ${filename_php_remote}"`;
+
+    await writeFile( filename_php, phpToRun );
+    await exec( runPHPConvert,  {
+      cwd: WORDPRESS_PATH,
+    });
   }
   if (format == "png") {
     return {
@@ -79,7 +91,7 @@ async function testImage(filename) {
     const referenceFile = (await makeImage(filename, "png", width, 100))
       .filename;
     const promises = [];
-    for (let format of ["webp", "jpeg", "avif"]) {
+    for (let format of ["webp", "jpeg"]) { // removed , "avif" for testing
       DATA[filename][width][format] = DATA[filename][width][format] || {};
       let i = 0;
       for (let quality = 10; quality <= 100; quality += 5) {
@@ -120,10 +132,12 @@ async function run() {
     console.error(e.stack);
     return;
   }
+  console.log("Writing File\n");
   require("fs").writeFileSync(
     "./data/image-quality.json",
     JSON.stringify(DATA, null, " ")
   );
+  console.log("File Written\n");
 }
 
 console.log(

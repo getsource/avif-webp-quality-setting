@@ -3,84 +3,64 @@
   "160": {
    "50": {
     "webp": {
-     "quality": "35",
-     "sizeReduction": "15%"
-    },
-    "avif": {
-     "quality": "35",
-     "sizeReduction": "35%"
+     "quality": "40",
+     "sizeReduction": "2%"
     }
    },
    "60": {
     "webp": {
      "quality": "45",
-     "sizeReduction": "15%"
-    },
-    "avif": {
-     "quality": "40",
-     "sizeReduction": "32%"
+     "sizeReduction": "3%"
     }
    },
    "70": {
     "webp": {
      "quality": "55",
-     "sizeReduction": "20%"
-    },
-    "avif": {
-     "quality": "45",
-     "sizeReduction": "32%"
+     "sizeReduction": "4%"
     }
    },
    "80": {
     "webp": {
      "quality": "75",
-     "sizeReduction": "20%"
-    },
-    "avif": {
-     "quality": "50",
-     "sizeReduction": "37%"
+     "sizeReduction": "5%"
+    }
+   },
+   "85": {
+    "webp": {
+     "quality": "80",
+     "sizeReduction": "6%"
     }
    }
   },
   "320": {
    "50": {
     "webp": {
-     "quality": "35",
-     "sizeReduction": "17%"
-    },
-    "avif": {
      "quality": "40",
-     "sizeReduction": "30%"
+     "sizeReduction": "6%"
     }
    },
    "60": {
     "webp": {
      "quality": "45",
-     "sizeReduction": "17%"
-    },
-    "avif": {
-     "quality": "40",
-     "sizeReduction": "39%"
+     "sizeReduction": "8%"
     }
    },
    "70": {
     "webp": {
      "quality": "55",
-     "sizeReduction": "23%"
-    },
-    "avif": {
-     "quality": "50",
-     "sizeReduction": "30%"
+     "sizeReduction": "11%"
     }
    },
    "80": {
     "webp": {
      "quality": "75",
-     "sizeReduction": "24%"
-    },
-    "avif": {
-     "quality": "55",
-     "sizeReduction": "32%"
+     "sizeReduction": "12%"
+    }
+   },
+   "85": {
+    "webp": {
+     "quality": "80",
+     "sizeReduction": "13%"
     }
    }
   },
@@ -88,41 +68,31 @@
    "50": {
     "webp": {
      "quality": "35",
-     "sizeReduction": "20%"
-    },
-    "avif": {
-     "quality": "40",
-     "sizeReduction": "34%"
+     "sizeReduction": "16%"
     }
    },
    "60": {
     "webp": {
-     "quality": "40",
-     "sizeReduction": "26%"
-    },
-    "avif": {
-     "quality": "40",
-     "sizeReduction": "42%"
+     "quality": "45",
+     "sizeReduction": "16%"
     }
    },
    "70": {
     "webp": {
      "quality": "55",
-     "sizeReduction": "27%"
-    },
-    "avif": {
-     "quality": "45",
-     "sizeReduction": "43%"
+     "sizeReduction": "20%"
     }
    },
    "80": {
     "webp": {
+     "quality": "75",
+     "sizeReduction": "22%"
+    }
+   },
+   "85": {
+    "webp": {
      "quality": "80",
-     "sizeReduction": "16%"
-    },
-    "avif": {
-     "quality": "55",
-     "sizeReduction": "37%"
+     "sizeReduction": "22%"
     }
    }
   },
@@ -130,41 +100,31 @@
    "50": {
     "webp": {
      "quality": "40",
-     "sizeReduction": "23%"
-    },
-    "avif": {
-     "quality": "40",
-     "sizeReduction": "43%"
+     "sizeReduction": "21%"
     }
    },
    "60": {
     "webp": {
-     "quality": "50",
-     "sizeReduction": "25%"
-    },
-    "avif": {
      "quality": "45",
-     "sizeReduction": "42%"
+     "sizeReduction": "26%"
     }
    },
    "70": {
     "webp": {
-     "quality": "65",
+     "quality": "60",
      "sizeReduction": "27%"
-    },
-    "avif": {
-     "quality": "50",
-     "sizeReduction": "43%"
     }
    },
    "80": {
     "webp": {
+     "quality": "75",
+     "sizeReduction": "31%"
+    }
+   },
+   "85": {
+    "webp": {
      "quality": "80",
-     "sizeReduction": "24%"
-    },
-    "avif": {
-     "quality": "60",
-     "sizeReduction": "36%"
+     "sizeReduction": "31%"
     }
    }
   },
@@ -172,41 +132,31 @@
    "50": {
     "webp": {
      "quality": "45",
-     "sizeReduction": "28%"
-    },
-    "avif": {
-     "quality": "45",
-     "sizeReduction": "45%"
+     "sizeReduction": "24%"
     }
    },
    "60": {
     "webp": {
-     "quality": "60",
+     "quality": "55",
      "sizeReduction": "25%"
-    },
-    "avif": {
-     "quality": "50",
-     "sizeReduction": "43%"
     }
    },
    "70": {
     "webp": {
-     "quality": "75",
-     "sizeReduction": "26%"
-    },
-    "avif": {
-     "quality": "55",
-     "sizeReduction": "41%"
+     "quality": "65",
+     "sizeReduction": "29%"
     }
    },
    "80": {
     "webp": {
      "quality": "80",
-     "sizeReduction": "28%"
-    },
-    "avif": {
-     "quality": "65",
-     "sizeReduction": "37%"
+     "sizeReduction": "25%"
+    }
+   },
+   "85": {
+    "webp": {
+     "quality": "85",
+     "sizeReduction": "22%"
     }
    }
   }
@@ -216,83 +166,63 @@
    "50": {
     "webp": {
      "quality": "45",
-     "sizeReduction": "5%"
-    },
-    "avif": {
-     "quality": "45",
-     "sizeReduction": "11%"
+     "sizeReduction": "6%"
     }
    },
    "60": {
     "webp": {
-     "quality": "50",
-     "sizeReduction": "11%"
-    },
-    "avif": {
-     "quality": "50",
-     "sizeReduction": "8%"
-    }
-   },
-   "70": {
-    "webp": {
-     "quality": "60",
-     "sizeReduction": "16%"
-    },
-    "avif": {
      "quality": "55",
      "sizeReduction": "6%"
     }
    },
+   "70": {
+    "webp": {
+     "quality": "65",
+     "sizeReduction": "10%"
+    }
+   },
    "80": {
     "webp": {
-     "quality": "75",
-     "sizeReduction": "22%"
-    },
-    "avif": {
-     "quality": "60",
-     "sizeReduction": "13%"
+     "quality": "80",
+     "sizeReduction": "4%"
+    }
+   },
+   "85": {
+    "webp": {
+     "quality": "80",
+     "sizeReduction": "18%"
     }
    }
   },
   "320": {
    "50": {
     "webp": {
-     "quality": "45",
-     "sizeReduction": "13%"
-    },
-    "avif": {
      "quality": "50",
-     "sizeReduction": "10%"
+     "sizeReduction": "5%"
     }
    },
    "60": {
     "webp": {
      "quality": "60",
-     "sizeReduction": "7%"
-    },
-    "avif": {
-     "quality": "50",
-     "sizeReduction": "21%"
+     "sizeReduction": "6%"
     }
    },
    "70": {
     "webp": {
-     "quality": "65",
-     "sizeReduction": "16%"
-    },
-    "avif": {
-     "quality": "55",
-     "sizeReduction": "17%"
+     "quality": "70",
+     "sizeReduction": "10%"
     }
    },
    "80": {
     "webp": {
      "quality": "80",
      "sizeReduction": "7%"
-    },
-    "avif": {
-     "quality": "60",
-     "sizeReduction": "23%"
+    }
+   },
+   "85": {
+    "webp": {
+     "quality": "80",
+     "sizeReduction": "21%"
     }
    }
   },
@@ -300,41 +230,31 @@
    "50": {
     "webp": {
      "quality": "60",
-     "sizeReduction": "7%"
-    },
-    "avif": {
-     "quality": "50",
-     "sizeReduction": "28%"
+     "sizeReduction": "6%"
     }
    },
    "60": {
     "webp": {
      "quality": "65",
-     "sizeReduction": "13%"
-    },
-    "avif": {
-     "quality": "55",
-     "sizeReduction": "19%"
+     "sizeReduction": "14%"
     }
    },
    "70": {
     "webp": {
      "quality": "75",
      "sizeReduction": "16%"
-    },
-    "avif": {
-     "quality": "60",
-     "sizeReduction": "18%"
     }
    },
    "80": {
     "webp": {
      "quality": "80",
      "sizeReduction": "19%"
-    },
-    "avif": {
-     "quality": "65",
-     "sizeReduction": "24%"
+    }
+   },
+   "85": {
+    "webp": {
+     "quality": "85",
+     "sizeReduction": "13%"
     }
    }
   },
@@ -343,40 +263,30 @@
     "webp": {
      "quality": "65",
      "sizeReduction": "14%"
-    },
-    "avif": {
-     "quality": "55",
-     "sizeReduction": "26%"
     }
    },
    "60": {
     "webp": {
-     "quality": "80",
-     "sizeReduction": "-12%"
-    },
-    "avif": {
-     "quality": "55",
-     "sizeReduction": "36%"
+     "quality": "75",
+     "sizeReduction": "14%"
     }
    },
    "70": {
     "webp": {
      "quality": "80",
-     "sizeReduction": "7%"
-    },
-    "avif": {
-     "quality": "60",
-     "sizeReduction": "35%"
+     "sizeReduction": "9%"
     }
    },
    "80": {
     "webp": {
      "quality": "85",
-     "sizeReduction": "4%"
-    },
-    "avif": {
-     "quality": "70",
-     "sizeReduction": "28%"
+     "sizeReduction": "8%"
+    }
+   },
+   "85": {
+    "webp": {
+     "quality": "85",
+     "sizeReduction": "21%"
     }
    }
   },
@@ -384,41 +294,31 @@
    "50": {
     "webp": {
      "quality": "70",
-     "sizeReduction": "11%"
-    },
-    "avif": {
-     "quality": "55",
-     "sizeReduction": "32%"
+     "sizeReduction": "12%"
     }
    },
    "60": {
     "webp": {
      "quality": "80",
-     "sizeReduction": "-8%"
-    },
-    "avif": {
-     "quality": "60",
-     "sizeReduction": "25%"
+     "sizeReduction": "-2%"
     }
    },
    "70": {
     "webp": {
      "quality": "80",
-     "sizeReduction": "12%"
-    },
-    "avif": {
-     "quality": "65",
-     "sizeReduction": "24%"
+     "sizeReduction": "17%"
     }
    },
    "80": {
     "webp": {
      "quality": "85",
-     "sizeReduction": "9%"
-    },
-    "avif": {
-     "quality": "70",
-     "sizeReduction": "30%"
+     "sizeReduction": "12%"
+    }
+   },
+   "85": {
+    "webp": {
+     "quality": "85",
+     "sizeReduction": "25%"
     }
    }
   }
@@ -427,42 +327,32 @@
   "160": {
    "50": {
     "webp": {
-     "quality": "45",
-     "sizeReduction": "35%"
-    },
-    "avif": {
-     "quality": "45",
-     "sizeReduction": "49%"
+     "quality": "50",
+     "sizeReduction": "28%"
     }
    },
    "60": {
     "webp": {
      "quality": "55",
-     "sizeReduction": "36%"
-    },
-    "avif": {
-     "quality": "50",
-     "sizeReduction": "48%"
+     "sizeReduction": "32%"
     }
    },
    "70": {
     "webp": {
-     "quality": "65",
-     "sizeReduction": "38%"
-    },
-    "avif": {
-     "quality": "55",
-     "sizeReduction": "46%"
+     "quality": "70",
+     "sizeReduction": "32%"
     }
    },
    "80": {
     "webp": {
      "quality": "80",
-     "sizeReduction": "33%"
-    },
-    "avif": {
-     "quality": "60",
-     "sizeReduction": "49%"
+     "sizeReduction": "31%"
+    }
+   },
+   "85": {
+    "webp": {
+     "quality": "85",
+     "sizeReduction": "27%"
     }
    }
   },
@@ -470,83 +360,63 @@
    "50": {
     "webp": {
      "quality": "60",
-     "sizeReduction": "29%"
-    },
-    "avif": {
-     "quality": "50",
-     "sizeReduction": "53%"
+     "sizeReduction": "24%"
     }
    },
    "60": {
     "webp": {
      "quality": "70",
-     "sizeReduction": "29%"
-    },
-    "avif": {
-     "quality": "55",
-     "sizeReduction": "47%"
+     "sizeReduction": "26%"
     }
    },
    "70": {
     "webp": {
      "quality": "80",
-     "sizeReduction": "23%"
-    },
-    "avif": {
-     "quality": "55",
-     "sizeReduction": "56%"
+     "sizeReduction": "18%"
     }
    },
    "80": {
     "webp": {
      "quality": "85",
-     "sizeReduction": "23%"
-    },
-    "avif": {
-     "quality": "65",
-     "sizeReduction": "52%"
+     "sizeReduction": "18%"
+    }
+   },
+   "85": {
+    "webp": {
+     "quality": "85",
+     "sizeReduction": "31%"
     }
    }
   },
   "640": {
    "50": {
     "webp": {
-     "quality": "80",
-     "sizeReduction": "-2%"
-    },
-    "avif": {
-     "quality": "50",
-     "sizeReduction": "60%"
+     "quality": "70",
+     "sizeReduction": "20%"
     }
    },
    "60": {
     "webp": {
-     "quality": "80",
-     "sizeReduction": "11%"
-    },
-    "avif": {
-     "quality": "55",
-     "sizeReduction": "55%"
+     "quality": "75",
+     "sizeReduction": "25%"
     }
    },
    "70": {
     "webp": {
-     "quality": "85",
-     "sizeReduction": "5%"
-    },
-    "avif": {
-     "quality": "60",
-     "sizeReduction": "56%"
+     "quality": "80",
+     "sizeReduction": "24%"
     }
    },
    "80": {
     "webp": {
-     "quality": "85",
-     "sizeReduction": "26%"
-    },
-    "avif": {
-     "quality": "70",
-     "sizeReduction": "54%"
+     "quality": "90",
+     "sizeReduction": "-3%"
+    }
+   },
+   "85": {
+    "webp": {
+     "quality": "90",
+     "sizeReduction": "13%"
     }
    }
   },
@@ -555,40 +425,30 @@
     "webp": {
      "quality": "70",
      "sizeReduction": "30%"
-    },
-    "avif": {
-     "quality": "55",
-     "sizeReduction": "60%"
     }
    },
    "60": {
     "webp": {
-     "quality": "80",
-     "sizeReduction": "19%"
-    },
-    "avif": {
-     "quality": "55",
-     "sizeReduction": "65%"
+     "quality": "75",
+     "sizeReduction": "35%"
     }
    },
    "70": {
     "webp": {
-     "quality": "85",
-     "sizeReduction": "14%"
-    },
-    "avif": {
-     "quality": "65",
-     "sizeReduction": "60%"
+     "quality": "80",
+     "sizeReduction": "34%"
     }
    },
    "80": {
     "webp": {
+     "quality": "85",
+     "sizeReduction": "37%"
+    }
+   },
+   "85": {
+    "webp": {
      "quality": "90",
-     "sizeReduction": "4%"
-    },
-    "avif": {
-     "quality": "75",
-     "sizeReduction": "59%"
+     "sizeReduction": "24%"
     }
    }
   },
@@ -596,41 +456,31 @@
    "50": {
     "webp": {
      "quality": "70",
-     "sizeReduction": "35%"
-    },
-    "avif": {
-     "quality": "55",
-     "sizeReduction": "66%"
+     "sizeReduction": "34%"
     }
    },
    "60": {
     "webp": {
      "quality": "80",
-     "sizeReduction": "22%"
-    },
-    "avif": {
-     "quality": "60",
-     "sizeReduction": "64%"
+     "sizeReduction": "26%"
     }
    },
    "70": {
     "webp": {
      "quality": "85",
-     "sizeReduction": "18%"
-    },
-    "avif": {
-     "quality": "65",
-     "sizeReduction": "66%"
+     "sizeReduction": "22%"
     }
    },
    "80": {
     "webp": {
      "quality": "90",
-     "sizeReduction": "12%"
-    },
-    "avif": {
-     "quality": "80",
-     "sizeReduction": "53%"
+     "sizeReduction": "13%"
+    }
+   },
+   "85": {
+    "webp": {
+     "quality": "90",
+     "sizeReduction": "30%"
     }
    }
   }
@@ -639,42 +489,32 @@
   "160": {
    "50": {
     "webp": {
-     "quality": "40",
-     "sizeReduction": "9%"
-    },
-    "avif": {
      "quality": "45",
-     "sizeReduction": "10%"
+     "sizeReduction": "5%"
     }
    },
    "60": {
     "webp": {
-     "quality": "55",
-     "sizeReduction": "6%"
-    },
-    "avif": {
      "quality": "50",
-     "sizeReduction": "7%"
+     "sizeReduction": "11%"
     }
    },
    "70": {
     "webp": {
-     "quality": "60",
-     "sizeReduction": "15%"
-    },
-    "avif": {
-     "quality": "55",
-     "sizeReduction": "3%"
+     "quality": "65",
+     "sizeReduction": "11%"
     }
    },
    "80": {
     "webp": {
      "quality": "80",
-     "sizeReduction": "4%"
-    },
-    "avif": {
-     "quality": "60",
-     "sizeReduction": "11%"
+     "sizeReduction": "6%"
+    }
+   },
+   "85": {
+    "webp": {
+     "quality": "80",
+     "sizeReduction": "19%"
     }
    }
   },
@@ -682,167 +522,127 @@
    "50": {
     "webp": {
      "quality": "50",
-     "sizeReduction": "4%"
-    },
-    "avif": {
-     "quality": "45",
-     "sizeReduction": "23%"
+     "sizeReduction": "7%"
     }
    },
    "60": {
     "webp": {
      "quality": "55",
-     "sizeReduction": "10%"
-    },
-    "avif": {
-     "quality": "50",
-     "sizeReduction": "19%"
+     "sizeReduction": "12%"
     }
    },
    "70": {
     "webp": {
-     "quality": "70",
-     "sizeReduction": "11%"
-    },
-    "avif": {
-     "quality": "55",
-     "sizeReduction": "15%"
+     "quality": "65",
+     "sizeReduction": "18%"
     }
    },
    "80": {
     "webp": {
      "quality": "80",
-     "sizeReduction": "10%"
-    },
-    "avif": {
-     "quality": "60",
-     "sizeReduction": "21%"
+     "sizeReduction": "12%"
+    }
+   },
+   "85": {
+    "webp": {
+     "quality": "80",
+     "sizeReduction": "24%"
     }
    }
   },
   "640": {
    "50": {
     "webp": {
-     "quality": "60",
-     "sizeReduction": "6%"
-    },
-    "avif": {
      "quality": "50",
-     "sizeReduction": "27%"
+     "sizeReduction": "16%"
     }
    },
    "60": {
     "webp": {
-     "quality": "65",
-     "sizeReduction": "11%"
-    },
-    "avif": {
-     "quality": "55",
-     "sizeReduction": "19%"
+     "quality": "60",
+     "sizeReduction": "16%"
     }
    },
    "70": {
     "webp": {
-     "quality": "80",
-     "sizeReduction": "0%"
-    },
-    "avif": {
-     "quality": "55",
-     "sizeReduction": "32%"
+     "quality": "70",
+     "sizeReduction": "21%"
     }
    },
    "80": {
     "webp": {
+     "quality": "80",
+     "sizeReduction": "18%"
+    }
+   },
+   "85": {
+    "webp": {
      "quality": "85",
-     "sizeReduction": "4%"
-    },
-    "avif": {
-     "quality": "65",
-     "sizeReduction": "26%"
+     "sizeReduction": "16%"
     }
    }
   },
   "1280": {
    "50": {
     "webp": {
-     "quality": "70",
-     "sizeReduction": "5%"
-    },
-    "avif": {
-     "quality": "50",
-     "sizeReduction": "43%"
+     "quality": "60",
+     "sizeReduction": "16%"
     }
    },
    "60": {
     "webp": {
-     "quality": "80",
-     "sizeReduction": "-7%"
-    },
-    "avif": {
-     "quality": "55",
-     "sizeReduction": "36%"
+     "quality": "70",
+     "sizeReduction": "17%"
     }
    },
    "70": {
     "webp": {
      "quality": "80",
-     "sizeReduction": "10%"
-    },
-    "avif": {
-     "quality": "60",
-     "sizeReduction": "36%"
+     "sizeReduction": "8%"
     }
    },
    "80": {
     "webp": {
      "quality": "85",
-     "sizeReduction": "13%"
-    },
-    "avif": {
-     "quality": "70",
-     "sizeReduction": "33%"
+     "sizeReduction": "11%"
+    }
+   },
+   "85": {
+    "webp": {
+     "quality": "85",
+     "sizeReduction": "24%"
     }
    }
   },
   "1920": {
    "50": {
     "webp": {
-     "quality": "70",
-     "sizeReduction": "13%"
-    },
-    "avif": {
-     "quality": "50",
-     "sizeReduction": "51%"
+     "quality": "65",
+     "sizeReduction": "16%"
     }
    },
    "60": {
     "webp": {
-     "quality": "80",
-     "sizeReduction": "0%"
-    },
-    "avif": {
-     "quality": "55",
-     "sizeReduction": "45%"
+     "quality": "75",
+     "sizeReduction": "18%"
     }
    },
    "70": {
     "webp": {
      "quality": "80",
-     "sizeReduction": "16%"
-    },
-    "avif": {
-     "quality": "60",
-     "sizeReduction": "45%"
+     "sizeReduction": "15%"
     }
    },
    "80": {
     "webp": {
      "quality": "85",
-     "sizeReduction": "17%"
-    },
-    "avif": {
-     "quality": "70",
-     "sizeReduction": "42%"
+     "sizeReduction": "16%"
+    }
+   },
+   "85": {
+    "webp": {
+     "quality": "90",
+     "sizeReduction": "8%"
     }
    }
   }

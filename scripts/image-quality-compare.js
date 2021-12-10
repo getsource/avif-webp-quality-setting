@@ -7,10 +7,10 @@ for (let filename in data) {
   for (let width in data[filename]) {
     reference[filename][width] = {};
     const formats = data[filename][width];
-    for (let refQuality of [50, 60, 70, 80]) {
+    for (let refQuality of [50, 60, 70, 80, 85]) {
       reference[filename][width][refQuality] = {};
       const ref = formats.jpeg[refQuality];
-      for (let format of ["webp", "avif"]) {
+      for (let format of ["webp"]) {
         reference[filename][width][refQuality][format] = {};
         for (let quality in formats[format]) {
           const info = formats[format][quality];
