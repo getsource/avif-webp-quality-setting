@@ -8,7 +8,11 @@ const writeFile = promisify(require("fs").writeFile);
 
 const DATA = require("../data/image-quality.json");
 
-const WORDPRESS_PATH = "/path/to/your/wordpress-develop"
+// TODO: Automated copying of the included samples to the `SAMPLE_PATH`.
+// TODO: Allow loading of these paths from environment, command line, or config file.
+// TODO: Copy the results back to the git project path.
+// TODO: Clean the server of the files for running it again when things complete successfully.
+const WORDPRESS_PATH = "/path/to/your/wordpress-develop";
 const SAMPLE_PATH = WORDPRESS_PATH + "/src/wp-content/quality-samples";
 const REMOTE_SAMPLE_PATH = "/var/www/src/wp-content/quality-samples";
 
@@ -32,11 +36,14 @@ async function makeImage(input, format, width, quality) {
   const filename_php_remote = filename_remote + ".php";
 
   if (!(await imageExists(filename))) {
-    const phpToRun = `<?php $image = wp_get_image_editor( '${input_remote}' ); $image->resize( ${width}, null ); add_filter( 'wp_editor_set_quality', function( $quality ) { return ${quality}; }, 10, 1 ); $image->set_quality( ${quality} ); $image->save( '${filename_remote}' );`;
-    const runPHPConvert = `npm run env:cli "eval-file ${filename_php_remote}"`;
+    const default_to_gd = "add_filter( 'wp_image_editors', function ( $editors ) { return array( 'WP_Image_Editor_GD' ); } );"
+    // const defaultToImagick = "add_filter( 'wp_image_editors', function ( $editors ) { return array( 'WP_Image_Editor_Imagick' ) };"
 
-    await writeFile( filename_php, phpToRun );
-    await exec( runPHPConvert,  {
+    const php_to_run = `<?php ${default_to_gd} $image = wp_get_image_editor( '${input_remote}' ); $image->resize( ${width}, null ); add_filter( 'wp_editor_set_quality', function( $quality ) { return ${quality}; }, 10, 1 ); $image->set_quality( ${quality} ); $image->save( '${filename_remote}' );`;
+    const php_convert_command = `npm run env:cli "eval-file ${filename_php_remote}"`;
+
+    await writeFile( filename_php, php_to_run );
+    await exec( php_convert_command,  {
       cwd: WORDPRESS_PATH,
     });
   }
