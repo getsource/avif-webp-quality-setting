@@ -7,15 +7,35 @@ const execFile = promisify(require("child_process").execFile);
 const writeFile = promisify(require("fs").writeFile);
 
 const DATA = require("../data/image-quality.json");
+const { exit } = require("process");
 
 // TODO: Automated copying of the included samples to the `SAMPLE_PATH`.
 // TODO: Allow loading of these paths from environment, command line, or config file.
 // TODO: Copy the results back to the git project path.
 // TODO: Clean the server of the files for running it again when things complete successfully.
-const WORDPRESS_PATH = "/path/to/your/wordpress-develop";
-const SAMPLE_PATH = WORDPRESS_PATH + "/src/wp-content/quality-samples";
-const REMOTE_SAMPLE_PATH = "/var/www/src/wp-content/quality-samples";
+// TODO: Sanitize filenames in results, so that they don't reflect the `WORDPRESS_PATH`.
 
+// `WORDPRESS_PATH` is required, but the rest of the paths can have defaults.
+// The default assumption is running with the WordPress Docker Environment.
+if ( ! process.env.WORDPRESS_PATH ) {
+  console.error("'WORDPRESS_PATH' must be defined.\n");
+  process.exit(1);
+}
+
+// Path to location of WordPress Docker Environment.
+const WORDPRESS_PATH = process.env.WORDPRESS_PATH;
+
+// Path to where the samples referenced below in `run()` are located.
+// This requires write access, because the generated samples go in here as well.
+const SAMPLE_PATH = process.env.SAMPLE_PATH || WORDPRESS_PATH + "/src/wp-content/quality-samples";
+
+// Path to above samples, but accessible from the environment running WordPress.
+// This is defaulted to the path used with the WordPress Docker Environment.
+const REMOTE_SAMPLE_PATH = process.env.REMOTE_SAMPLE_PATH || "/var/www/src/wp-content/quality-samples";
+
+// Options are `Imagick` or `GD`.
+// It's not currently supported to run both at once.
+const EDITOR_TO_USE = process.env.EDITOR_TO_USE || "Imagick";
 
 async function getFilename(input, format, width, quality, extension, remote = false) {
   const path = remote ? REMOTE_SAMPLE_PATH : SAMPLE_PATH;
@@ -36,10 +56,9 @@ async function makeImage(input, format, width, quality) {
   const filename_php_remote = filename_remote + ".php";
 
   if (!(await imageExists(filename))) {
-    const default_to_gd = "add_filter( 'wp_image_editors', function ( $editors ) { return array( 'WP_Image_Editor_GD' ); } );"
-    // const defaultToImagick = "add_filter( 'wp_image_editors', function ( $editors ) { return array( 'WP_Image_Editor_Imagick' ) };"
+    const default_to_editor = `add_filter( 'wp_image_editors', function ( $editors ) { return array( 'WP_Image_Editor_${EDITOR_TO_USE}' ); } );`;
 
-    const php_to_run = `<?php ${default_to_gd} $image = wp_get_image_editor( '${input_remote}' ); $image->resize( ${width}, null ); add_filter( 'wp_editor_set_quality', function( $quality ) { return ${quality}; }, 10, 1 ); $image->set_quality( ${quality} ); $image->save( '${filename_remote}' );`;
+    const php_to_run = `<?php ${default_to_editor} $image = wp_get_image_editor( '${input_remote}' ); $image->resize( ${width}, null ); add_filter( 'wp_editor_set_quality', function( $quality ) { return ${quality}; }, 10, 1 ); $image->set_quality( ${quality} ); $image->save( '${filename_remote}' );`;
     const php_convert_command = `npm run env:cli "eval-file ${filename_php_remote}"`;
 
     await writeFile( filename_php, php_to_run );
