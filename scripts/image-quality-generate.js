@@ -22,7 +22,11 @@ if ( ! process.env.WORDPRESS_PATH ) {
   process.exit(1);
 }
 
-// Path to location of WordPress Docker Environment.
+/* Path to location of WordPress Docker Environment / WordPress development checkout:
+ * https://github.com/wordpress/wordpress-develop/
+ *
+ * The script assumes the paths within (like the `src` subdirectory) will match with what is in the above repo.
+ */
 const WORDPRESS_PATH = process.env.WORDPRESS_PATH;
 
 // Path to where the samples referenced below in `run()` are located.
@@ -30,12 +34,19 @@ const WORDPRESS_PATH = process.env.WORDPRESS_PATH;
 const SAMPLE_PATH = process.env.SAMPLE_PATH || WORDPRESS_PATH + "/src/wp-content/quality-samples";
 
 // Path to above samples, but accessible from the environment running WordPress.
-// This is defaulted to the path used with the WordPress Docker Environment.
+// This is defaulted to the path used in the WordPress Docker Environment.
 const REMOTE_SAMPLE_PATH = process.env.REMOTE_SAMPLE_PATH || "/var/www/src/wp-content/quality-samples";
 
-// Options are `Imagick` or `GD`.
+// Options are `Imagick` or `GD`; defaults to Imagick.
 // It's not currently supported to run both at once.
 const EDITOR_TO_USE = process.env.EDITOR_TO_USE || "Imagick";
+
+/* Local Environment Toggle
+ * Allows for generating images using WP-CLI on a local environment directly, skipping running through Docker.
+ *
+ * Currently, setting `SAMPLE_PATH` and `REMOTE_SAMPLE_PATH` to the same path is also necessary.
+ */
+const USE_LOCAL = process.env.USE_LOCAL || false;
 
 async function getFilename(input, format, width, quality, extension, remote = false) {
   const path = remote ? REMOTE_SAMPLE_PATH : SAMPLE_PATH;
@@ -55,11 +66,14 @@ async function makeImage(input, format, width, quality) {
   const filename_remote = await getFilename(input, format, width, quality, format, true);
   const filename_php_remote = filename_remote + ".php";
 
-  if (!(await imageExists(filename))) {
-    const default_to_editor = `add_filter( 'wp_image_editors', function ( $editors ) { return array( 'WP_Image_Editor_${EDITOR_TO_USE}' ); } );`;
+  const default_to_editor = `add_filter( 'wp_image_editors', function ( $editors ) { return array( 'WP_Image_Editor_${EDITOR_TO_USE}' ); } );`;
 
+  // Defaults to Docker, unless USE_LOCAL is set.
+  const php_convert_command = USE_LOCAL ? `wp --path=${WORDPRESS_PATH}/src eval-file ${filename_php_remote}` : `npm run env:cli "eval-file ${filename_php_remote}"`;
+
+  if (!(await imageExists(filename))) {
     const php_to_run = `<?php ${default_to_editor} $image = wp_get_image_editor( '${input_remote}' ); $image->resize( ${width}, null ); add_filter( 'wp_editor_set_quality', function( $quality ) { return ${quality}; }, 10, 1 ); $image->set_quality( ${quality} ); $image->save( '${filename_remote}' );`;
-    const php_convert_command = `npm run env:cli "eval-file ${filename_php_remote}"`;
+
 
     await writeFile( filename_php, php_to_run );
     await exec( php_convert_command,  {
