@@ -69,7 +69,7 @@ async function makeImage(input, format, width, quality) {
   const default_to_editor = `add_filter( 'wp_image_editors', function ( $editors ) { return array( 'WP_Image_Editor_${EDITOR_TO_USE}' ); } );`;
 
   // Defaults to Docker, unless USE_LOCAL is set.
-  const php_convert_command = USE_LOCAL ? `wp --path=${WORDPRESS_PATH}/src eval-file ${filename_php_remote}` : `npm run env:cli "eval-file ${filename_php_remote}"`;
+  const php_convert_command = USE_LOCAL ? `wp eval-file "${filename_php_remote}"` : `npm run env:cli "eval-file ${filename_php_remote}"`;
 
   if (!(await imageExists(filename))) {
     const php_to_run = `<?php ${default_to_editor} $image = wp_get_image_editor( '${input_remote}' ); $image->resize( ${width}, null ); add_filter( 'wp_editor_set_quality', function( $quality ) { return ${quality}; }, 10, 1 ); $image->set_quality( ${quality} ); $image->save( '${filename_remote}' );`;
