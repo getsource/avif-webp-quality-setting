@@ -15,10 +15,13 @@ const { exit } = require("process");
 // TODO: Clean the server of the files for running it again when things complete successfully.
 // TODO: Sanitize filenames in results, so that they don't reflect the `WORDPRESS_PATH`.
 
-// `WORDPRESS_PATH` is required, but the rest of the paths can have defaults.
+// Import Environment Variables from `.env`
+require('dotenv').config();
+
+// `IQG_WORDPRESS_PATH` is required, but the rest of the paths can have defaults.
 // The default assumption is running with the WordPress Docker Environment.
-if ( ! process.env.WORDPRESS_PATH ) {
-  console.error("'WORDPRESS_PATH' must be defined.\n");
+if ( ! process.env.IQG_WORDPRESS_PATH ) {
+  console.error("'IQG_WORDPRESS_PATH' must be defined.\n");
   process.exit(1);
 }
 
@@ -27,26 +30,29 @@ if ( ! process.env.WORDPRESS_PATH ) {
  *
  * The script assumes the paths within (like the `src` subdirectory) will match with what is in the above repo.
  */
-const WORDPRESS_PATH = process.env.WORDPRESS_PATH;
+const WORDPRESS_PATH = process.env.IQG_WORDPRESS_PATH;
 
 // Path to where the samples referenced below in `run()` are located.
 // This requires write access, because the generated samples go in here as well.
-const SAMPLE_PATH = process.env.SAMPLE_PATH || WORDPRESS_PATH + "/src/wp-content/quality-samples";
+const SAMPLE_PATH = process.env.IQG_SAMPLE_PATH || WORDPRESS_PATH + "/src/wp-content/quality-samples";
 
 // Path to above samples, but accessible from the environment running WordPress.
-// This is defaulted to the path used in the WordPress Docker Environment.
-const REMOTE_SAMPLE_PATH = process.env.REMOTE_SAMPLE_PATH || "/var/www/src/wp-content/quality-samples";
+// This defaults to the path used in the WordPress Docker Environment.
+const REMOTE_SAMPLE_PATH = process.env.IQG_REMOTE_SAMPLE_PATH || "/var/www/src/wp-content/quality-samples";
 
-// Options are `Imagick` or `GD`; defaults to Imagick.
-// It's not currently supported to run both at once.
-const EDITOR_TO_USE = process.env.EDITOR_TO_USE || "Imagick";
+/* Options are `Imagick` or `GD`; defaults to Imagick.
+ * It's not currently supported to run both at once.
+ *
+ * This should probably be a command line argument rather than `.env`
+ */
+const EDITOR_TO_USE = process.env.IQG_EDITOR_TO_USE || "Imagick";
 
 /* Local Environment Toggle
  * Allows for generating images using WP-CLI on a local environment directly, skipping running through Docker.
  *
  * Currently, setting `SAMPLE_PATH` and `REMOTE_SAMPLE_PATH` to the same path is also necessary.
  */
-const USE_LOCAL = process.env.USE_LOCAL || false;
+const USE_LOCAL = process.env.IQG_USE_LOCAL || false;
 
 async function getFilename(input, format, width, quality, extension, remote = false) {
   const path = remote ? REMOTE_SAMPLE_PATH : SAMPLE_PATH;
