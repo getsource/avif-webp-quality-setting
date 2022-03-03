@@ -3,160 +3,160 @@
   "160": {
    "50": {
     "webp": {
-     "quality": "40",
-     "sizeReduction": "2%"
+     "quality": "35",
+     "sizeReduction": "25%"
     }
    },
    "60": {
     "webp": {
-     "quality": "45",
-     "sizeReduction": "3%"
+     "quality": "40",
+     "sizeReduction": "29%"
     }
    },
    "70": {
     "webp": {
      "quality": "55",
-     "sizeReduction": "4%"
+     "sizeReduction": "27%"
     }
    },
    "80": {
     "webp": {
-     "quality": "75",
-     "sizeReduction": "5%"
+     "quality": "70",
+     "sizeReduction": "31%"
     }
    },
    "85": {
     "webp": {
      "quality": "80",
-     "sizeReduction": "6%"
+     "sizeReduction": "27%"
     }
    }
   },
   "320": {
    "50": {
     "webp": {
-     "quality": "40",
-     "sizeReduction": "6%"
+     "quality": "35",
+     "sizeReduction": "23%"
     }
    },
    "60": {
     "webp": {
      "quality": "45",
-     "sizeReduction": "8%"
+     "sizeReduction": "22%"
     }
    },
    "70": {
     "webp": {
      "quality": "55",
-     "sizeReduction": "11%"
+     "sizeReduction": "27%"
     }
    },
    "80": {
     "webp": {
-     "quality": "75",
-     "sizeReduction": "12%"
+     "quality": "70",
+     "sizeReduction": "31%"
     }
    },
    "85": {
     "webp": {
      "quality": "80",
-     "sizeReduction": "13%"
+     "sizeReduction": "28%"
     }
    }
   },
   "640": {
    "50": {
     "webp": {
-     "quality": "35",
-     "sizeReduction": "16%"
+     "quality": "30",
+     "sizeReduction": "30%"
     }
    },
    "60": {
     "webp": {
-     "quality": "45",
-     "sizeReduction": "16%"
+     "quality": "40",
+     "sizeReduction": "28%"
     }
    },
    "70": {
     "webp": {
-     "quality": "55",
-     "sizeReduction": "20%"
+     "quality": "50",
+     "sizeReduction": "31%"
     }
    },
    "80": {
     "webp": {
-     "quality": "75",
-     "sizeReduction": "22%"
+     "quality": "70",
+     "sizeReduction": "33%"
     }
    },
    "85": {
     "webp": {
      "quality": "80",
-     "sizeReduction": "22%"
+     "sizeReduction": "29%"
     }
    }
   },
   "1280": {
    "50": {
     "webp": {
-     "quality": "40",
-     "sizeReduction": "21%"
+     "quality": "35",
+     "sizeReduction": "30%"
     }
    },
    "60": {
     "webp": {
      "quality": "45",
-     "sizeReduction": "26%"
+     "sizeReduction": "29%"
     }
    },
    "70": {
     "webp": {
-     "quality": "60",
-     "sizeReduction": "27%"
+     "quality": "55",
+     "sizeReduction": "33%"
     }
    },
    "80": {
     "webp": {
      "quality": "75",
-     "sizeReduction": "31%"
+     "sizeReduction": "34%"
     }
    },
    "85": {
     "webp": {
      "quality": "80",
-     "sizeReduction": "31%"
+     "sizeReduction": "34%"
     }
    }
   },
   "1920": {
    "50": {
     "webp": {
-     "quality": "45",
-     "sizeReduction": "24%"
+     "quality": "40",
+     "sizeReduction": "31%"
     }
    },
    "60": {
     "webp": {
-     "quality": "55",
-     "sizeReduction": "25%"
+     "quality": "50",
+     "sizeReduction": "30%"
     }
    },
    "70": {
     "webp": {
      "quality": "65",
-     "sizeReduction": "29%"
+     "sizeReduction": "31%"
     }
    },
    "80": {
     "webp": {
      "quality": "80",
-     "sizeReduction": "25%"
+     "sizeReduction": "27%"
     }
    },
    "85": {
     "webp": {
      "quality": "85",
-     "sizeReduction": "22%"
+     "sizeReduction": "24%"
     }
    }
   }
@@ -166,31 +166,31 @@
    "50": {
     "webp": {
      "quality": "45",
-     "sizeReduction": "6%"
+     "sizeReduction": "3%"
     }
    },
    "60": {
     "webp": {
-     "quality": "55",
-     "sizeReduction": "6%"
+     "quality": "50",
+     "sizeReduction": "10%"
     }
    },
    "70": {
     "webp": {
      "quality": "65",
-     "sizeReduction": "10%"
+     "sizeReduction": "11%"
     }
    },
    "80": {
     "webp": {
-     "quality": "80",
-     "sizeReduction": "4%"
+     "quality": "75",
+     "sizeReduction": "21%"
     }
    },
    "85": {
     "webp": {
      "quality": "80",
-     "sizeReduction": "18%"
+     "sizeReduction": "20%"
     }
    }
   },
@@ -198,63 +198,63 @@
    "50": {
     "webp": {
      "quality": "50",
-     "sizeReduction": "5%"
+     "sizeReduction": "1%"
     }
    },
    "60": {
     "webp": {
-     "quality": "60",
-     "sizeReduction": "6%"
+     "quality": "55",
+     "sizeReduction": "8%"
     }
    },
    "70": {
     "webp": {
-     "quality": "70",
-     "sizeReduction": "10%"
+     "quality": "65",
+     "sizeReduction": "12%"
     }
    },
    "80": {
     "webp": {
      "quality": "80",
-     "sizeReduction": "7%"
+     "sizeReduction": "8%"
     }
    },
    "85": {
     "webp": {
      "quality": "80",
-     "sizeReduction": "21%"
+     "sizeReduction": "22%"
     }
    }
   },
   "640": {
    "50": {
     "webp": {
-     "quality": "60",
-     "sizeReduction": "6%"
+     "quality": "55",
+     "sizeReduction": "10%"
     }
    },
    "60": {
     "webp": {
      "quality": "65",
-     "sizeReduction": "14%"
+     "sizeReduction": "9%"
     }
    },
    "70": {
     "webp": {
      "quality": "75",
-     "sizeReduction": "16%"
+     "sizeReduction": "13%"
     }
    },
    "80": {
     "webp": {
      "quality": "80",
-     "sizeReduction": "19%"
+     "sizeReduction": "16%"
     }
    },
    "85": {
     "webp": {
      "quality": "85",
-     "sizeReduction": "13%"
+     "sizeReduction": "12%"
     }
    }
   },
@@ -262,31 +262,31 @@
    "50": {
     "webp": {
      "quality": "65",
-     "sizeReduction": "14%"
+     "sizeReduction": "13%"
     }
    },
    "60": {
     "webp": {
-     "quality": "75",
-     "sizeReduction": "14%"
+     "quality": "70",
+     "sizeReduction": "19%"
     }
    },
    "70": {
     "webp": {
      "quality": "80",
-     "sizeReduction": "9%"
+     "sizeReduction": "5%"
     }
    },
    "80": {
     "webp": {
      "quality": "85",
-     "sizeReduction": "8%"
+     "sizeReduction": "0%"
     }
    },
    "85": {
     "webp": {
      "quality": "85",
-     "sizeReduction": "21%"
+     "sizeReduction": "15%"
     }
    }
   },
@@ -299,26 +299,26 @@
    },
    "60": {
     "webp": {
-     "quality": "80",
-     "sizeReduction": "-2%"
+     "quality": "75",
+     "sizeReduction": "20%"
     }
    },
    "70": {
     "webp": {
      "quality": "80",
-     "sizeReduction": "17%"
+     "sizeReduction": "14%"
     }
    },
    "80": {
     "webp": {
      "quality": "85",
-     "sizeReduction": "12%"
+     "sizeReduction": "8%"
     }
    },
    "85": {
     "webp": {
      "quality": "85",
-     "sizeReduction": "25%"
+     "sizeReduction": "22%"
     }
    }
   }
@@ -327,46 +327,46 @@
   "160": {
    "50": {
     "webp": {
-     "quality": "50",
-     "sizeReduction": "28%"
+     "quality": "45",
+     "sizeReduction": "40%"
     }
    },
    "60": {
     "webp": {
      "quality": "55",
-     "sizeReduction": "32%"
+     "sizeReduction": "38%"
     }
    },
    "70": {
     "webp": {
-     "quality": "70",
-     "sizeReduction": "32%"
+     "quality": "65",
+     "sizeReduction": "40%"
     }
    },
    "80": {
     "webp": {
      "quality": "80",
-     "sizeReduction": "31%"
+     "sizeReduction": "35%"
     }
    },
    "85": {
     "webp": {
      "quality": "85",
-     "sizeReduction": "27%"
+     "sizeReduction": "31%"
     }
    }
   },
   "320": {
    "50": {
     "webp": {
-     "quality": "60",
-     "sizeReduction": "24%"
+     "quality": "65",
+     "sizeReduction": "21%"
     }
    },
    "60": {
     "webp": {
      "quality": "70",
-     "sizeReduction": "26%"
+     "sizeReduction": "25%"
     }
    },
    "70": {
@@ -384,7 +384,7 @@
    "85": {
     "webp": {
      "quality": "85",
-     "sizeReduction": "31%"
+     "sizeReduction": "30%"
     }
    }
   },
@@ -392,31 +392,31 @@
    "50": {
     "webp": {
      "quality": "70",
-     "sizeReduction": "20%"
+     "sizeReduction": "24%"
     }
    },
    "60": {
     "webp": {
-     "quality": "75",
-     "sizeReduction": "25%"
+     "quality": "80",
+     "sizeReduction": "10%"
     }
    },
    "70": {
     "webp": {
-     "quality": "80",
-     "sizeReduction": "24%"
+     "quality": "85",
+     "sizeReduction": "8%"
     }
    },
    "80": {
     "webp": {
-     "quality": "90",
-     "sizeReduction": "-3%"
+     "quality": "85",
+     "sizeReduction": "26%"
     }
    },
    "85": {
     "webp": {
      "quality": "90",
-     "sizeReduction": "13%"
+     "sizeReduction": "12%"
     }
    }
   },
@@ -424,31 +424,31 @@
    "50": {
     "webp": {
      "quality": "70",
-     "sizeReduction": "30%"
+     "sizeReduction": "37%"
     }
    },
    "60": {
     "webp": {
-     "quality": "75",
-     "sizeReduction": "35%"
+     "quality": "80",
+     "sizeReduction": "25%"
     }
    },
    "70": {
     "webp": {
-     "quality": "80",
-     "sizeReduction": "34%"
+     "quality": "85",
+     "sizeReduction": "20%"
     }
    },
    "80": {
     "webp": {
-     "quality": "85",
-     "sizeReduction": "37%"
+     "quality": "90",
+     "sizeReduction": "7%"
     }
    },
    "85": {
     "webp": {
      "quality": "90",
-     "sizeReduction": "24%"
+     "sizeReduction": "23%"
     }
    }
   },
@@ -456,31 +456,31 @@
    "50": {
     "webp": {
      "quality": "70",
-     "sizeReduction": "34%"
+     "sizeReduction": "43%"
     }
    },
    "60": {
     "webp": {
      "quality": "80",
-     "sizeReduction": "26%"
+     "sizeReduction": "34%"
     }
    },
    "70": {
     "webp": {
      "quality": "85",
-     "sizeReduction": "22%"
+     "sizeReduction": "27%"
     }
    },
    "80": {
     "webp": {
      "quality": "90",
-     "sizeReduction": "13%"
+     "sizeReduction": "18%"
     }
    },
    "85": {
     "webp": {
      "quality": "90",
-     "sizeReduction": "30%"
+     "sizeReduction": "33%"
     }
    }
   }
@@ -489,64 +489,64 @@
   "160": {
    "50": {
     "webp": {
-     "quality": "45",
-     "sizeReduction": "5%"
+     "quality": "40",
+     "sizeReduction": "12%"
     }
    },
    "60": {
     "webp": {
      "quality": "50",
-     "sizeReduction": "11%"
+     "sizeReduction": "12%"
     }
    },
    "70": {
     "webp": {
-     "quality": "65",
-     "sizeReduction": "11%"
+     "quality": "60",
+     "sizeReduction": "17%"
     }
    },
    "80": {
     "webp": {
      "quality": "80",
-     "sizeReduction": "6%"
+     "sizeReduction": "8%"
     }
    },
    "85": {
     "webp": {
      "quality": "80",
-     "sizeReduction": "19%"
+     "sizeReduction": "21%"
     }
    }
   },
   "320": {
    "50": {
     "webp": {
-     "quality": "50",
-     "sizeReduction": "7%"
+     "quality": "45",
+     "sizeReduction": "10%"
     }
    },
    "60": {
     "webp": {
      "quality": "55",
-     "sizeReduction": "12%"
+     "sizeReduction": "11%"
     }
    },
    "70": {
     "webp": {
      "quality": "65",
-     "sizeReduction": "18%"
+     "sizeReduction": "16%"
     }
    },
    "80": {
     "webp": {
      "quality": "80",
-     "sizeReduction": "12%"
+     "sizeReduction": "13%"
     }
    },
    "85": {
     "webp": {
      "quality": "80",
-     "sizeReduction": "24%"
+     "sizeReduction": "26%"
     }
    }
   },
@@ -554,25 +554,25 @@
    "50": {
     "webp": {
      "quality": "50",
-     "sizeReduction": "16%"
+     "sizeReduction": "13%"
     }
    },
    "60": {
     "webp": {
      "quality": "60",
-     "sizeReduction": "16%"
+     "sizeReduction": "15%"
     }
    },
    "70": {
     "webp": {
      "quality": "70",
-     "sizeReduction": "21%"
+     "sizeReduction": "18%"
     }
    },
    "80": {
     "webp": {
      "quality": "80",
-     "sizeReduction": "18%"
+     "sizeReduction": "17%"
     }
    },
    "85": {
@@ -585,32 +585,32 @@
   "1280": {
    "50": {
     "webp": {
-     "quality": "60",
-     "sizeReduction": "16%"
+     "quality": "55",
+     "sizeReduction": "19%"
     }
    },
    "60": {
     "webp": {
      "quality": "70",
-     "sizeReduction": "17%"
+     "sizeReduction": "15%"
     }
    },
    "70": {
     "webp": {
      "quality": "80",
-     "sizeReduction": "8%"
+     "sizeReduction": "6%"
     }
    },
    "80": {
     "webp": {
      "quality": "85",
-     "sizeReduction": "11%"
+     "sizeReduction": "9%"
     }
    },
    "85": {
     "webp": {
      "quality": "85",
-     "sizeReduction": "24%"
+     "sizeReduction": "23%"
     }
    }
   },
@@ -623,26 +623,26 @@
    },
    "60": {
     "webp": {
-     "quality": "75",
-     "sizeReduction": "18%"
+     "quality": "70",
+     "sizeReduction": "22%"
     }
    },
    "70": {
     "webp": {
      "quality": "80",
-     "sizeReduction": "15%"
+     "sizeReduction": "14%"
     }
    },
    "80": {
     "webp": {
      "quality": "85",
-     "sizeReduction": "16%"
+     "sizeReduction": "13%"
     }
    },
    "85": {
     "webp": {
      "quality": "90",
-     "sizeReduction": "8%"
+     "sizeReduction": "3%"
     }
    }
   }
