@@ -37,11 +37,15 @@ As a lot of steps are currently necessary, there is room for things to be automa
     * Go to "File->Import->Upload", and choose `data/image-quality-reference.tsv`.
     * Choose "Import Location->Append to Current Sheet" and click "Import Data".
     * The pivot table should update for the new information.
+* Note which version of DSSIM was used to generate the data on the report, in a commit, or otherwise, so that others can reproduce your findings. The scale [has changed between versions](https://github.com/kornelski/dssim#interpreting-the-values).
 
 ## Additional Notes
 ### Re-running
-* Clean out any entries in `data/image-quality.json` that you want to be re-generated. Otherwise, the script will resume. This is useful in the case of resource exhaustion, which has been encountered when using Imagick during testing.
-* Right now, the process generates extra files that end up in `IQG_SAMPLE_PATH`, including PHP scripts that generated in order to be able to run using WP-CLI within the WP Docker Environment. This means that between runs, cleaning out `IQG_SAMPLE_PATH` is necessary. I usually use something like `rm $IQG_SAMPLE_PATH/sample*-*.*`, to leave only the original samples intact.
+* Clean out any entries in `data/image-quality.json` that you want to be re-generated. Otherwise, the script will resume from where it left off. This is useful in the case of resource exhaustion, which has been encountered when using Imagick during testing.
+* Right now, the process generates extra files that end up in `IQG_SAMPLE_PATH`, including PHP scripts that generated in order to be able to run using WP-CLI within the WP Docker Environment. This means that between runs, cleaning out `IQG_SAMPLE_PATH` is necessary.
+
+Something like this will take care of clearing all the generated files and data to start again:
+`rm data/image-quality*; echo "{}" > data/image-quality.json && rm $IQG_SAMPLE_PATH/sample*-*.*`
 
 Right now, this script spawns WP-CLI within Docker for each of the generated images, which isn't ideal. Ideally this would be able to run natively inside the Docker environment (or another environment). However, doing so requires the dependencies of this project to be present, so it isn't currently done.
 
