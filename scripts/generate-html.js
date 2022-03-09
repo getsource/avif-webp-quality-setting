@@ -8,7 +8,7 @@ function pick(obj) {
 }
 
 const qualities = [];
-for (let q = 10; q <= 100; q += 5) {
+for (let q = 70; q <= 100; q++) {
   qualities.push(q);
 }
 
@@ -116,8 +116,6 @@ ${
 </p>`
 }
 </article>
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-141920860-1"></script>
-<script>window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'UA-141920860-1');</script>
 </body>`;
 
   require("fs").writeFileSync(`./${filename}`, html);
