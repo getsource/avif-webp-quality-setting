@@ -7,7 +7,7 @@ for (let filename in data) {
   for (let width in data[filename]) {
     reference[filename][width] = {};
     const formats = data[filename][width];
-    for (let refQuality of [50, 60, 70, 80, 85]) {
+    for (let refQuality = 70; refQuality < 100; refQuality++) { // of [50, 55, 60, 65, 70, 75, 80, 85, 90, 95]) {
       reference[filename][width][refQuality] = {};
       const ref = formats.jpeg[refQuality];
       for (let format of ["webp"]) {

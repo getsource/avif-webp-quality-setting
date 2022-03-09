@@ -132,7 +132,9 @@ function print(input, format, width, quality, info) {
 
 async function testImage(filename) {
   DATA[filename] = DATA[filename] || {};
-  for (let width of [160, 320, 640, 1280, 1920]) {
+
+  // These sizes line up with the default WordPress image sizes.
+  for (let width of [150, 300, 768, 1024, 1536, 2048, 2560]) {
     DATA[filename][width] = DATA[filename][width] || {};
     const referenceFile = (await makeImage(filename, "png", width, 100))
       .filename;
@@ -140,7 +142,7 @@ async function testImage(filename) {
     for (let format of ["webp", "jpeg"]) { // removed , "avif" for testing
       DATA[filename][width][format] = DATA[filename][width][format] || {};
       let i = 0;
-      for (let quality = 10; quality <= 100; quality += 5) {
+      for (let quality = 70; quality <= 100; quality += 1) {
         const existingData = DATA[filename][width][format][quality];
         if (existingData) {
           print(filename, format, width, quality, existingData);

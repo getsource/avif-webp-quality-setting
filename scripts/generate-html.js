@@ -8,7 +8,7 @@ function pick(obj) {
 }
 
 const qualities = [];
-for (let q = 10; q <= 100; q += 5) {
+for (let q = 70; q <= 100; q++) {
   qualities.push(q);
 }
 
@@ -61,7 +61,7 @@ ${Object.keys(reference).map((sample) => {
 <select id="width" aria-label="Image width" onchange="loadImages()">
 ${Object.keys(pick(reference)).map((sample) => {
   return `<option ${
-    sample == "640" ? "selected" : ""
+    sample == "768" ? "selected" : ""
   } value="${sample}">${sample}px width</option>`;
 })}
 </select>
