@@ -142,7 +142,7 @@ async function testImage(filename) {
     for (let format of ["webp", "jpeg"]) { // removed , "avif" for testing
       DATA[filename][width][format] = DATA[filename][width][format] || {};
       let i = 0;
-      for (let quality = 70; quality <= 100; quality += 1) {
+      for (let quality = 70; quality <= 100; quality++) {
         const existingData = DATA[filename][width][format][quality];
         if (existingData) {
           print(filename, format, width, quality, existingData);
@@ -171,6 +171,8 @@ async function run() {
     `${SAMPLE_PATH}/sample1.jpg`,
     `${SAMPLE_PATH}/sample2.jpg`,
     `${SAMPLE_PATH}/sample3.jpg`,
+    `${SAMPLE_PATH}/sample4.jpg`,
+    `${SAMPLE_PATH}/sample5.jpg`,
   ]) {
     promises.push(testImage(input));
   }
