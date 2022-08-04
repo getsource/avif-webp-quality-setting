@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - main
+  pull_request:
   workflow_dispatch:
 
 # Cancels all previous workflow runs for pull requests that have not completed.
@@ -20,7 +21,7 @@ env:
 jobs:
   #
   #
-  # 
+  #
   image-quality:
     name: Image Quality Comparisons
     runs-on: ubuntu-latest
