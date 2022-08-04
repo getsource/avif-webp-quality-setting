@@ -17,7 +17,7 @@ As a lot of steps are currently necessary, there is room for things to be automa
     * Check out the [WordPress Core development environment](https://github.com/wordpress/wordpress-develop/), and get the Docker environment running.
 * Create `.env` file or set an environment variable for `IQG_WORDPRESS_PATH` to the path to your WordPress development environment. \
     (additional variables are available inside `scripts/image-quality-generate.js` for testing with different environments).
-* Copy the images from `quality-samples` that you want to test to the `IQG_SAMPLE_PATH`. This path defaults to `/src/wp-content/quality-samples` inside `IQG_WORDPRESS_PATH`. The names will need to match those in `scripts/image-quality-generate.js`.
+* Copy the images from `quality-samples` in [the original repository](https://github.com/cramforce/avif-webp-quality-setting/tree/main/quality-samples) that you want to test to the `IQG_SAMPLE_PATH`. This path defaults to `/src/wp-content/quality-samples` inside `IQG_WORDPRESS_PATH`. The names will need to match those in `scripts/image-quality-generate.js`.
 
 ### Generate Data
 * Run `node scripts/image-quality-generate.js > data/image-quality.tsv`. \
