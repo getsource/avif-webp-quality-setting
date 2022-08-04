@@ -48,6 +48,12 @@ jobs:
           repository: WordPress/wordpress-develop
           path: ${{ env.IQG_WORDPRESS_PATH }}
 
+      - name: Install NodeJS
+        uses: actions/setup-node@eeb10cff27034e7acf239c5d29f62154018672fd # v3.3.0
+        with:
+          node-version-file: './wordpress-develop/.nvmrc'
+          cache: npm
+
       - name: Install WordPress dependencies
         run: npm install
         working-directory: ${{ env.IQG_WORDPRESS_PATH }}
