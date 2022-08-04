@@ -15,6 +15,7 @@ concurrency:
   cancel-in-progress: true
 
 env:
+  PUPPETEER_SKIP_CHROMIUM_DOWNLOAD: ${{ true }}
   IQG_WORDPRESS_PATH: "${{ github.workspace }}/wordpress-develop"
   IQG_SAMPLE_PATH: "${{ github.workspace }}/wordpress-develop/src/wp-content/quality-samples"
 
