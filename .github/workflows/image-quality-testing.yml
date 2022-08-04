@@ -28,6 +28,9 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: Install DSSIM
+        run: sudo snap install dssim
+
       - name: Checkout repository
         uses: actions/checkout@2541b1294d2704b0964813337f33b291d3f8596b # v3.0.2
 
@@ -62,6 +65,9 @@ jobs:
       - name: Prepare WordPress
         run: npm run build:dev
         working-directory: ${{ env.IQG_WORDPRESS_PATH }}
+
+      - name: Install project dependencies
+        run: npm install
 
       - name: Copy image samples
         run: mkdir ${{ env.IQG_SAMPLE_PATH }} && cp ${{ github.workspace }}/original-project/quality-samples/*.{jpeg,webp} ${{ env.IQG_SAMPLE_PATH }}
