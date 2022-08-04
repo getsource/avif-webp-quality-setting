@@ -1,0 +1,90 @@
+name: Image Quality Testing
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+  workflow_dispatch:
+
+# Cancels all previous workflow runs for pull requests that have not completed.
+concurrency:
+  # The concurrency group contains the workflow name and the branch name for pull requests
+  # or the commit hash for any other events.
+  group: ${{ github.workflow }}-${{ github.event_name == 'pull_request' && github.head_ref || github.sha }}
+  cancel-in-progress: true
+
+env:
+  PUPPETEER_SKIP_CHROMIUM_DOWNLOAD: ${{ true }}
+  IQG_WORDPRESS_PATH: "${{ github.workspace }}/wordpress-develop"
+  IQG_SAMPLE_PATH: "${{ github.workspace }}/wordpress-develop/src/wp-content/quality-samples"
+
+jobs:
+  #
+  #
+  #
+  image-quality:
+    name: Image Quality Comparisons
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Install DSSIM
+        run: sudo snap install dssim
+
+      - name: Checkout repository
+        uses: actions/checkout@2541b1294d2704b0964813337f33b291d3f8596b # v3.0.2
+
+      - name: Checkout WordPress
+        uses: actions/checkout@2541b1294d2704b0964813337f33b291d3f8596b # v3.0.2
+        with:
+          repository: WordPress/wordpress-develop
+          path: ${{ env.IQG_WORDPRESS_PATH }}
+
+      - name: Checkout original project with image samples
+        uses: actions/checkout@2541b1294d2704b0964813337f33b291d3f8596b # v3.0.2
+        with:
+          repository: cramforce/avif-webp-quality-setting
+          path: ./original-project
+
+      - name: Checkout WordPress
+        uses: actions/checkout@2541b1294d2704b0964813337f33b291d3f8596b # v3.0.2
+        with:
+          repository: WordPress/wordpress-develop
+          path: ${{ env.IQG_WORDPRESS_PATH }}
+
+      - name: Install NodeJS
+        uses: actions/setup-node@eeb10cff27034e7acf239c5d29f62154018672fd # v3.3.0
+        with:
+          node-version-file: './wordpress-develop/.nvmrc'
+          cache: npm
+
+      - name: Install WordPress dependencies
+        run: npm install
+        working-directory: ${{ env.IQG_WORDPRESS_PATH }}
+
+      - name: Start WordPress Docker containers
+        run: npm run env:start
+        working-directory: ${{ env.IQG_WORDPRESS_PATH }}
+
+      - name: Prepare WordPress
+        run: npm run build:dev
+        working-directory: ${{ env.IQG_WORDPRESS_PATH }}
+
+      - name: Install WordPress
+        run: npm run env:install
+        working-directory: ${{ env.IQG_WORDPRESS_PATH }}
+
+      - name: Install project dependencies
+        run: npm install
+
+      - name: Copy image samples
+        run: mkdir ${{ env.IQG_SAMPLE_PATH }} && cp ${{ github.workspace }}/original-project/quality-samples/*.{jpeg,webp} ${{ env.IQG_SAMPLE_PATH }}
+
+      - name: Generate data
+        run: node scripts/image-quality-generate.js > data/image-quality.tsv
+
+      - name: Capture output
+        run: node scripts/image-quality-compare.js > data/image-quality-reference.tsv
+
+      - name: Visualize output
+        run: node scripts/generate-html.js
