@@ -16,7 +16,7 @@ concurrency:
 
 env:
   IQG_WORDPRESS_PATH: './wordpress-develop'
-  IQG_SAMPLE_PATH: './wordpress-develop/src/wp-content/quality-samples'
+  IQG_SAMPLE_PATH: "${{ github.workspace }}/wordpress-develop/src/wp-content/quality-samples"
 
 jobs:
   #
