@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/cramforce/avif-webp-quality-setting#readme",
   "dependencies": {
+    "dotenv": "^16.0.1",
     "forever": "^3.0.4",
     "sharp": "^0.27.1"
   }
