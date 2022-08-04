@@ -15,7 +15,7 @@ concurrency:
   cancel-in-progress: true
 
 env:
-  IQG_WORDPRESS_PATH: './wordpress-develop'
+  IQG_WORDPRESS_PATH: "${{ github.workspace }}/wordpress-develop"
   IQG_SAMPLE_PATH: "${{ github.workspace }}/wordpress-develop/src/wp-content/quality-samples"
 
 jobs:
@@ -63,7 +63,7 @@ jobs:
         working-directory: ${{ env.IQG_WORDPRESS_PATH }}
 
       - name: Copy image samples
-        run: mkdir ${{ env.IQG_SAMPLE_PATH }} && cp ${{ env.IQG_SAMPLE_PATH }}/*.{jpeg,webp} ${{ env.IQG_SAMPLE_PATH }}
+        run: mkdir ${{ env.IQG_SAMPLE_PATH }} && cp ${{ github.workspace }}/original-project/quality-samples/*.{jpeg,webp} ${{ env.IQG_SAMPLE_PATH }}
 
       - name: Generate data
         run: node scripts/image-quality-generate.js > data/image-quality.tsv
