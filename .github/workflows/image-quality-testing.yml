@@ -62,12 +62,12 @@ jobs:
         run: npm install
         working-directory: ${{ env.IQG_WORDPRESS_PATH }}
 
-      - name: Prepare WordPress
-        run: npm run build:dev
-        working-directory: ${{ env.IQG_WORDPRESS_PATH }}
-
       - name: Start WordPress Docker containers
         run: npm run env:start
+        working-directory: ${{ env.IQG_WORDPRESS_PATH }}
+
+      - name: Prepare WordPress
+        run: npm run build:dev
         working-directory: ${{ env.IQG_WORDPRESS_PATH }}
 
       - name: Install WordPress
